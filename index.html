@@ -9,10 +9,10 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css>">
+    <!-- <link rel="stylesheet" href="assets/css/style.css>"> -->
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -24,18 +24,20 @@
     <!-- Contains the Game info -->
     <section>
         <!-- Letter blanks go here -->
-        <h2>Letter blanks will go here.</h2>
+        <h2 id="letterBlanks">Letter blanks will go here.</h2>
         <hr>
-        <p>Press any key to start.</p>
+        <!-- Text will disappear after the  first keypress. -->
+        <p id="pressAnyKey">Press any key to start.</p>
         <hr>
-        <p>No. of Wins</p>
+        <p id="numWin">No. of Wins</p>
         <hr>
-        <p>No. of Guesses Remaining</p>
+        <p id="remainingGuess">No. of Guesses Remaining</p>
         <hr>
-        <p>Guessed Letters</p>
-        
+        <p id="guessedLetters">Letters Already Guessed</p>
     </section>
 
+    <!-- Import of the game JS -->
+    <script src="assets/javascript/game.js"></script>
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

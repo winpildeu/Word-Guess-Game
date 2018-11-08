@@ -58,10 +58,26 @@ function checkConditions(letter, obj) {
     obj.wordArray = [...array];
 }
 
+// Function to check for win/lose and reset
+function checkWinLose(obj) {
+    // console.log(`Comp: ${obj.computerGuess}`);
+    // console.log(`User: ${obj.wordArray}`);
+    if (obj.wordArray.join() === obj.computerGuess.join()) {
+        obj.win++;
+        alert("You WIN!");
+        reset(obj);
+    }
+    else if(obj.guess === 0) {
+        alert("You lose... try again!");
+        reset(obj);
+    }
+}
+
 // ========== CODE ==========
 
 // Show the initial values on the HTML page
 reset(word);
+console.log(word.computerGuess);
 
 // Runs when the user presses a letter
 document.onkeyup = function (event) {
@@ -76,12 +92,14 @@ document.onkeyup = function (event) {
     let keyPress = event.key;
     // Check for matching letters
     checkConditions(keyPress, word);
-    //
 
     // Update the letters that were guessed and remaining guesses
     word.guessedLetters.push(keyPress);
+    console.log(word.wordArray);
     lettersBlanksLink.textContent = word.wordArray.join(" ");
     guessedLettersLink.textContent = word.guessedLetters;
     remainingGuessLink.textContent = word.guess;
 
+    // Check for win/ lose
+    checkWinLose(word);
 }

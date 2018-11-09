@@ -21,6 +21,7 @@ var guessedLettersLink = document.getElementById("guessedLetters");
 // Reset function
 function reset(obj) {
     obj.guess = 10;
+    obj.guessedLetters = [];
     obj.computerGuess = chooseYou(starterPokemon).split('');
     obj.wordArray = blankShow(obj.computerGuess.length);
     lettersBlanksLink.textContent = obj.wordArray.join(" ");

@@ -6,8 +6,8 @@
 
     <!-- CSS reset -->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,9 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body class=" grey lighten-5">
+<body class="grey lighten-5">
     <!-- Header with logo -->
-    <header class="z-depth-3">
+    <header class="z-depth-2">
         <div id="logo">
             <img class="responsive-img" src="assets/images/logo.png">
         </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col s12 m12">
                 <!-- Text will disappear after the  first keypress. -->
-                <h5 id="pressAnyKey" class="center white-text">Press any key to start.</h5>
+                <h4 id="pressAnyKey" class="center white-text">Press any key to start.</h4>
             </div>
         </div>
 
@@ -73,18 +73,29 @@
     </div>
 
     <!-- Contains the Game info -->
-    <section class="container">
-        <!-- Letter blanks go here -->
-        <h2>Letter Blanks: <span id="letterBlanks">Letter blanks will go here.</span></h2>
-        <hr>
+    <div id="gameInfo" class="container amber accent-3">
+        <div class="row">
+            <div class="col m12">
+                <!-- Letter blanks go here -->
+                <h4 class="center white-text">Letter Blanks: <span id="letterBlanks">Letter blanks will go here.</span></h4>
+                <hr>
+            </div>
+        </div>
 
-        <hr>
-        <strong>No. of Wins:</strong> <span id="numWin">-</span>
-        <hr>
-        <strong>No. of Guesses Remaining:</strong> <span id="remainingGuess">-</span>
-        <hr>
-        <strong>Letters Already Guessed:</strong> <span id="guessedLetters">-</span>
-    </section>
+        <!-- Other info -->
+        <div class="row">
+            <div class="col m2">
+                <p>No. of Wins:</p> <span id="numWin">-</span>
+            </div>
+            <div class="col m4">
+                <p>No. of Guesses Remaining:</p> <span id="remainingGuess">-</span>
+            </div>
+            <div class="col m6">
+                <p>Letters Already Guessed:</p> <span id="guessedLetters">-</span>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Import of the game JS -->
     <script src="assets/javascript/game.js"></script>

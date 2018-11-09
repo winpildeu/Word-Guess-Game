@@ -83,7 +83,7 @@ console.log(word.computerGuess);
 document.onkeyup = function (event) {
 
     // Hide the instructions
-    pressAnyKeyLink.textContent = "---";
+    pressAnyKeyLink.textContent = "Who...?";
 
     // Decrement from the guesses
     word.guess--;

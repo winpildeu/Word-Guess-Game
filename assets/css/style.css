@@ -1,0 +1,27 @@
+/* Element styles */
+header {
+    height: 9rem;
+    background-color: red;
+    border-bottom: 1rem solid black;
+}
+
+/* Class styles */
+.pokePics {
+    padding:10px;
+}
+
+.card-content {
+    height: 10rem;
+}
+
+/* ID styles */
+#logo {
+    width: 600px;
+    margin: 0px auto;
+}
+
+#pokeCards {
+    margin-top: 7rem;
+    padding: 1rem 1rem 0rem 1rem;
+    border-radius: 1%;
+}
